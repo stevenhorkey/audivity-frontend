@@ -1,0 +1,93 @@
+import React, { Component } from 'react';
+import CFooter from '../cfooter/CFooter';
+import "./SubmitArticle.css";
+import Typist from 'react-typist';
+import UrlForm from './UrlForm'
+
+
+
+
+class SubmitArticle extends Component {
+
+    constructor(props) {
+        super(props);
+        this.url = null;
+      }
+
+    submit = values => {
+        // print the form values to the console
+        console.log(values);
+        
+      }
+
+    render() {
+
+        return (
+            <main className="SubmitArticle">
+                <section className="jumbotron mb-0 bg-light">
+                    <div className="container py-5">
+                        <h1 className="display-5 text-shadow text-white mb-0">Hi, welcome to Audivity!</h1>
+
+                        <h1 className="my-3 text-shadow text-white" id="typed">
+                            <div className="display-4">Submit a URL of your blog to receive professionally narrated samples free </div>
+                            </h1>
+
+                        <div className="h-100 mt-4">
+                        <UrlForm onSubmit={this.submit} /></div>
+                    </div>
+                </section>
+
+                
+                {<section className="bg-light pb-4">
+                    <div className="container py-5">
+
+
+                        <header className="text-center w-720 mx-auto pt-4">
+                            <h2 className="mb-4">Shipping in 2018</h2>
+                            <p className="team-p mb-5">Calling all creators, makers and hackers. Sign up and be the first to know about partnerships, promotions and when Audivity is available.</p>
+
+
+
+
+                        </header>
+
+
+
+                        <form className="mx-auto w-440">
+
+                            <div className="form-group mb-5 mt-4">
+                                <label htmlFor="nameInput">Your <strong>name.</strong></label>
+                                <input type="text" className="bg-light form-control border-top-0 border-left-0 border-right-0" id="nameInput" placeholder="Jon Dough" />
+                            </div>
+
+                            <div className="form-group mb-5">
+                                <label htmlFor="emailInput">Your <strong>email address</strong>.</label>
+                                <input type="email" className="bg-light form-control border-top-0 border-left-0 border-right-0" id="emailInput" aria-describedby="emailHelp" placeholder="jon@dough.com" />
+                            </div>
+
+                            <div className="form-group mb-5">
+                                <label htmlFor="aboutInput">Tell us about <strong>yourself</strong>.</label>
+
+                                <select className="custom-select bg-light border-top-0 border-left-0 border-right-0" id="aboutInput">
+                                    <option defaultValue>Choose...</option>
+                                    <option value="1">Content Creator</option>
+                                    <option value="2">Developer</option>
+                                    <option value="3">Audio Specialist</option>
+                                    <option value="3">Investor</option>
+                                    <option value="3">Audivity Enthusiast</option>
+                                </select>
+                            </div>
+                            <button type="submit" className="btn btn-primary text-uppercase px-3 pt-2">Stay Connected&nbsp;<i className="ion-android-arrow-forward"> </i></button>
+                        </form>
+
+
+                    </div>
+                </section>}
+
+                <CFooter />
+            </main>
+        );
+    }
+}
+
+export default SubmitArticle;
