@@ -3,22 +3,32 @@ import CFooter from '../cfooter/CFooter';
 import "./SubmitArticle.css";
 import Typist from 'react-typist';
 import UrlForm from './UrlForm'
-
-
-
+import axios from 'axios';
 
 class SubmitArticle extends Component {
 
     constructor(props) {
         super(props);
         this.url = null;
-      }
+        this.requestID = null;
+    }
 
     submit = values => {
         // print the form values to the console
         console.log(values);
-        
-      }
+        //Send rest request	
+        axios.post('https://api.audivity.com/url', {
+            url: this.url
+        })
+            .then(function (response) {
+                console.log(response);
+                this.requestID = response.requestID;
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }
 
     render() {
 
@@ -30,14 +40,14 @@ class SubmitArticle extends Component {
 
                         <h1 className="my-3 text-shadow text-white" id="typed">
                             <div className="display-4">Submit a URL of your blog to receive professionally narrated samples free </div>
-                            </h1>
+                        </h1>
 
                         <div className="h-100 mt-4">
-                        <UrlForm onSubmit={this.submit} /></div>
+                            <UrlForm onSubmit={this.submit} /></div>
                     </div>
                 </section>
 
-                
+
                 {<section className="bg-light pb-4">
                     <div className="container py-5">
 
