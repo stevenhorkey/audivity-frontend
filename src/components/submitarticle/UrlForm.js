@@ -6,7 +6,7 @@ import { Field, reduxForm } from 'redux-form'
     const errors = {}
     if (!values.url) {
       errors.url = 'URL Required'
-    } else if (/(\d{4})([\/-])(\d{1,2})\2(\d{1,2})/.test(values.url)) {
+    } else if (!/(\d{4})([\/-])(\d{1,2})\2(\d{1,2})/.test(values.url)) {
       errors.url = 'Hmm, doesn’t look like you’ve submitted a link to a specific blog posts. Try again.'
     }
  

@@ -4,8 +4,13 @@ import "./SubmitArticle.css";
 import Typist from 'react-typist';
 import UrlForm from './UrlForm'
 import axios from 'axios';
-
+import {Redirect} from "react-router-dom";
 class SubmitArticle extends Component {
+     
+    state = {
+        redirect: false,
+        url: '/submit_email/'
+      }
 
     constructor(props) {
         super(props);
@@ -16,13 +21,21 @@ class SubmitArticle extends Component {
     submit = values => {
         // print the form values to the console
         console.log(values);
+        // this.state.url += 'DFC'
+        // this.setState({ redirect: true })
         //Send rest request	
         axios.post('https://api.audivity.com/url', {
             url: this.url
         })
             .then(function (response) {
                 console.log(response);
+                //save ReqID
                 this.requestID = response.requestID;
+                //redirect to send_email view
+                this.state.url += 'DFC'
+                this.setState({ redirect: true })
+
+
             })
             .catch(function (error) {
                 console.log(error);
@@ -31,6 +44,10 @@ class SubmitArticle extends Component {
     }
 
     render() {
+        const { redirect } = this.state;
+        if (redirect) {
+            return <Redirect to={this.state.url}/>;
+          }
 
         return (
             <main className="SubmitArticle">

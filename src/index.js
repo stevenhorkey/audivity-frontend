@@ -12,6 +12,7 @@ import './assets/ionicons.css';
 import Contact from './components/contact/Contact';
 import Homepage from './components/homepage/Homepage';
 import SubmitArticle from './components/submitarticle/SubmitArticle';
+import SubmitEmail from './components/submitemail/SubmitEmail';
 import Login from './components/login/Login';
 import Navbar from './components/navbar/Navbar';
 import Signup from './components/signup/Signup';
@@ -39,6 +40,7 @@ ReactDOM.render(
                     <Route path="/signup" component={Signup}/>
                     <Route path="/team" component={Team}/>
                     <Route path="/submit_article" component={SubmitArticle}/>
+                    <Route path="/submit_email/:ReqID" component={SubmitEmail}/>
                     <Route path="/" component={Homepage}/>
                 </Switch>
             </div>
