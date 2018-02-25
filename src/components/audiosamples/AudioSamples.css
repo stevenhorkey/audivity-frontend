@@ -9,8 +9,20 @@
 .audiosamples .players{
     text-align: center;
 }
+.audiosamples .players .player{
+    display: inline-block;
+}
+.audiosamples .players .player .label{
+    border-radius: 4px;
+    font-size: x-large;
+    background: #02b8b2;
+    color: white;
+    margin: 0px 31px;
+    font-weight: 200;
+}
 .audiosamples .players iframe{
     max-width: 350px;
+    min-width: 320px;
 }
 .audiosamples .w-580 {
     max-width: 500px;
@@ -30,18 +42,8 @@
     font-size: 15px;
     line-height: 28px;
 }
-.audiosamples label {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.audiosamples strong {
-    font-weight: 500;
-}
-
-
-.team .team-p {
+.audiosamples .choice{
+    margin-top: 50px;
+    font-size: large;
     font-weight: 300;
-    font-size: 15px;
-    line-height: 28px;
 }
