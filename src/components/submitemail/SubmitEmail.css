@@ -10,6 +10,12 @@
 .SubmitEmail .w-580 {
     max-width: 500px;
 }
+.SubmitEmail .error {
+    margin-top: 9px;
+}
+.SubmitEmail .error .label{
+    color: red;
+}
 
 .SubmitEmail .card {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

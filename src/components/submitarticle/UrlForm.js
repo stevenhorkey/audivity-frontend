@@ -15,9 +15,6 @@ import { Field, reduxForm } from 'redux-form'
 
   const warn = values => {
     const warnings = {}
-    if (values.age < 19) {
-      warnings.age = 'Hmm, you seem a bit young...'
-    }
     return warnings
   }
 
@@ -26,7 +23,6 @@ import { Field, reduxForm } from 'redux-form'
         <input {...input} placeholder={label} type={type} className="form-control px-4 pt-2  card-shadow"  />
         <div className="error">{touched && ((error && <div className="label"><i className="ion-alert"> </i> &nbsp; {error}</div>) || (warning && <div>{warning}</div>))}</div>
       </div>
-      // <div>  </div> 
       
   )
 

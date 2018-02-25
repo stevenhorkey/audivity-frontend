@@ -5,6 +5,7 @@ import Typist from 'react-typist';
 import UrlForm from './UrlForm'
 import axios from 'axios';
 import {Redirect} from "react-router-dom";
+
 class SubmitArticle extends Component {
      
     state = {
