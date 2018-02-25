@@ -10,7 +10,7 @@ class SubmitArticle extends Component {
      
     state = {
         redirect: false,
-        url: '/submit_email/'
+        url: '/submitEmail/'
       }
 
     constructor(props) {
