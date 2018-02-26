@@ -7,11 +7,23 @@ class AudioSamples extends Component {
 
     constructor(props) {
         super(props);
+
+        //bind 'this'
+        this.save_prefered_audio = this.save_prefered_audio.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+
+        //Init state
+        this.state = {
+            //Init preferd audio
+            selected_audio: 0
+        }
+
         //Init players for testing
         this.players = [
             { akey: 'DQSD' },
             { akey: 'DDFS' },
         ];
+
         // Get related audio players
         axios.post('https://api.audivity.com/sample_audios', {
             userid: this.props.match.params.userID
@@ -25,6 +37,29 @@ class AudioSamples extends Component {
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    save_prefered_audio = () => {
+        if (this.state.selected_audio) {
+            //Send registre rest request	
+            axios.post('https://api.audivity.com/preferd_audio_sample', {
+                userid: this.props.match.params.userID,
+                selected_audio: this.state.selected_audio
+            })
+                .then(function (response) {
+                    console.log(response);
+                    //Request success
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+
+
+    }
+
+    handleChange = (e) => {
+        this.setState({ selected_audio: e.target.value });
     }
 
     render() {
@@ -41,7 +76,7 @@ class AudioSamples extends Component {
         });
         var ChoicesList = this.players.map(function (item, index) {
             return (
-                <option value={item.akey} key={item.akey}>Sample #{index+1}</option>
+                <option value={item.akey} key={item.akey}>Sample #{index + 1}</option>
             );
         });
         return (
@@ -60,10 +95,11 @@ class AudioSamples extends Component {
                             <div className="form-group mb-5 choice">
                                 <label htmlFor="aboutInput"><i className="ion-help-circled"> </i> &nbsp; Select your prefered audio</label>
 
-                                <select className="custom-select bg-light border-top-0 border-left-0 border-right-0" id="aboutInput">
+                                <select className="custom-select bg-light border-top-0 border-left-0 border-right-0" id="aboutInput" value={this.state.selected_audio} onChange={this.handleChange}>
+                                    <option value="" >I Prefer...</option>
                                     {ChoicesList}
                                 </select>
-                                <button type="submit" className="mt-3 btn btn-primary text-uppercase px-3 pt-2">Submit &nbsp;<i className="ion-android-arrow-forward"> </i></button>
+                                <button onClick={this.save_prefered_audio} className="mt-3 btn btn-primary text-uppercase px-3 pt-2">Submit &nbsp;<i className="ion-android-arrow-forward" > </i></button>
                             </div>
                         </div>
                     </div>
