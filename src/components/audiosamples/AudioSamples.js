@@ -26,7 +26,7 @@ class AudioSamples extends Component {
 
         // Get related audio players
         axios.post('https://api.audivity.com/sample_audios', {
-            userid: this.props.match.params.userID
+            rkey: this.props.match.params.userID
         })
             .then(function (response) {
                 console.log(response);
@@ -43,7 +43,7 @@ class AudioSamples extends Component {
         if (this.state.selected_audio) {
             //Send registre rest request	
             axios.post('https://api.audivity.com/preferd_audio_sample', {
-                userid: this.props.match.params.userID,
+                rkey: this.props.match.params.userID,
                 selected_audio: this.state.selected_audio
             })
                 .then(function (response) {

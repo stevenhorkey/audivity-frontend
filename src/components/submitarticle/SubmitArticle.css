@@ -70,7 +70,7 @@ nav {
 
 .SubmitArticle .display-4 {
     font-size: smaller;
-    line-height: 4.5rem;
+    /* line-height: 4.5rem; */
 }
 
 .SubmitArticle .display-5 {

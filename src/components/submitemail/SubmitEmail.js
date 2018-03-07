@@ -16,8 +16,10 @@ class SubmitEmail extends Component {
         this.setState({ success: true })
 
         //Send registre rest request	
-        axios.post('https://api.audivity.com/register_sample', {
-            reqid: this.props.match.params.ReqID
+        axios.post('https://api.audivity.com/register_profile', {
+            key: this.props.match.params.ReqID,
+            email: values.email,
+            name: values.name
         })
             .then(function (response) {
                 console.log(response);
