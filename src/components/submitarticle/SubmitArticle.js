@@ -22,19 +22,18 @@ class SubmitArticle extends Component {
     submit = values => {
         // print the form values to the console
         console.log(values);
-        // this.state.url += 'DFC'
-        // this.setState({ redirect: true })
+        var that = this;
         //Send rest request	
-        axios.post('https://api.audivity.com/url', {
-            url: this.url
+        axios.post('https://api.audivity.com/user/url', {
+            url: values.url
         })
             .then(function (response) {
                 console.log(response);
                 //save ReqID
-                this.requestID = response.requestID;
+                that.requestID = response.data.key;
                 //redirect to send_email view
-                this.state.url += 'DFC'
-                this.setState({ redirect: true })
+                that.state.url += that.requestID
+                that.setState({ redirect: true })
 
 
             })

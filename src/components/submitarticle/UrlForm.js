@@ -31,7 +31,7 @@ let UrlForm = (props) => {
   return (
     <form className= "mt-3" onSubmit={handleSubmit}>
     <div className="form-group mr-1 input-container url">
-      <Field component={renderField} type="text" label="Your article full url (e.g., http://myblogsite.com/02/01/2018/my-best-article)" name="url"/>
+      <Field component={renderField} type="text" label="Your article full url (e.g., http://myblogsite.com/2018/01/02/my-best-article)" name="url"/>
     </div>
     <button className="btn btn-primary px-4 pt-2 text-uppercase card-shadow">Submit &nbsp;<i className="ion-android-arrow-forward"> </i></button> 
     </form>

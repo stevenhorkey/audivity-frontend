@@ -12,11 +12,11 @@ class SubmitEmail extends Component {
 
     submit = values => {
         // print the form values to the console
-        console.log(values)
-        this.setState({ success: true })
+        console.log(values);
+        var that = this;
 
         //Send registre rest request	
-        axios.post('https://api.audivity.com/register_profile', {
+        axios.post('https://api.audivity.com/user/register_profile', {
             key: this.props.match.params.ReqID,
             email: values.email,
             name: values.name
@@ -24,7 +24,7 @@ class SubmitEmail extends Component {
             .then(function (response) {
                 console.log(response);
                 //Request success
-                this.setState({ success: true })
+                that.setState({ success: true })
 
             })
             .catch(function (error) {
@@ -50,7 +50,7 @@ class SubmitEmail extends Component {
                             
                         </header>
                         <section>
-                        <EmailForm onSubmit={this.submit} />
+                        {!success ? <EmailForm onSubmit={this.submit} /> : null}
                             {/* <form>
 
                                 <div className="form-group mb-5 mt-4">
