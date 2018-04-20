@@ -50,13 +50,13 @@ class UploadAudio extends Component {
 
         //Get freelancer's name, audio title & audio description
         let name = document.getElementById('freelancer-name').value;
-        let title = document.getElementById('audio-title').value;
+        // let title = document.getElementById('audio-title').value;
         let description = document.getElementById('audio-description').value;
 
         //Apend params
         data.append("key", this.props.match.params.ReqID);
         data.append("name", name);
-        data.append("title", title);
+        // data.append("title", title);
         data.append("description", description);
 
         // Send registre rest request	
@@ -84,10 +84,10 @@ class UploadAudio extends Component {
                             <header className="text-center">
 
 
-                                {uploaded ? <h1><i className="ion-checkmark-circled"> </i> &nbsp; Upload success! </h1> : <h1><i className="ion-upload"> </i> &nbsp;Upload your audio sample here</h1>}
+                                {uploaded ? <h1><i className="ion-checkmark-circled"> </i> &nbsp; Upload success! </h1> : <h1><i className="ion-upload"> </i> &nbsp;Upload your Audition</h1>}
 
                                 {uploaded ? <p> You voice over sample is on its way, you’ll receive an email as soon as  <b>{this.ReqUrl.company_name}</b> reviews it! </p> : null}
-                                {this.ReqUrl && !uploaded ? <p><b>{this.ReqUrl.company_name}</b> is requesting an audio production. Please limit your application to a brief memo and a 10-30 <b>MP3</b> edited audition with intro to the content and your name</p> : null}
+                                {this.ReqUrl && !uploaded ? <p>Your goal is to convey this <a href={this.ReqUrl.url}>specific article</a> in an engaging and informative way. Podcasting is an art so take it from here and feel free to find your own pace, tone. Do change article structure as you see fit so listeners digest the message and come back for more</p> : null}
 
                             </header>
                             {this.ReqUrl && !uploaded ? <section>
@@ -99,10 +99,10 @@ class UploadAudio extends Component {
                                 </div>
 
                                 {/* Audio title */}
-                                <div className="form-group mb-5 mt-4">
+                                {/* <div className="form-group mb-5 mt-4">
                                     <label htmlFor="nameInput">Audio title</label>
                                     <input type="text" className="form-control border-top-0 border-left-0 border-right-0" id="audio-title" placeholder="Jon Dough Podcast" />
-                                </div>
+                                </div> */}
 
                                 {/* Audio Description */}
                                 <div className="form-group mb-5 mt-4">
@@ -111,6 +111,7 @@ class UploadAudio extends Component {
                                 </div>
 
                                 <input id="audio-uploader" type="file" name="file" />
+                                <div class="info">Choose file (mp3 only) </div>
 
                                 <button type="submit" className="btn btn-primary text-uppercase px-3 pt-2" onClick={this.upload}>Send &nbsp;<i className="ion-android-arrow-forward"> </i></button>
 
