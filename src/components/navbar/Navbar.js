@@ -38,6 +38,9 @@ class Navbar extends Component {
                             <li className="nav-item mx-0">
                                 <Link className="nav-link text-shadow text-white" to="/team">Team</Link>
                             </li>
+                            <li className="nav-item mx-0">
+                                <a className="nav-link text-shadow text-white" href="https://angel.co/audivity/jobs" target="_blank">Jobs</a>
+                            </li>
                             <li className="nav-item mx-3">
                                 <Link className="nav-link text-shadow text-white" to="/contact">Contact</Link>
                             </li>

@@ -8,6 +8,7 @@ class CFooter extends Component {
             <footer className="cfooter">
                 <section className="text-center bg-dark py-2">
                     <Link className="nav-link text-white" to="/team">Team</Link>
+                    <a className="nav-link text-white" href="https://angel.co/audivity/jobs" target="_blank">Jobs</a>
                     <Link className="nav-link text-white" to="/contact">Contact</Link>
                     <Link className="nav-link text-white" to="/login">Log In</Link>
                 </section>
