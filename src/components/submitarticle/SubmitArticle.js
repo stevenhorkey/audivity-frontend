@@ -25,7 +25,10 @@ class SubmitArticle extends Component {
         var that = this;
         //Send rest request	
         axios.post('https://api.audivity.com/user/url', {
-            url: values.url
+            url: values.url,
+            gender: values.gender,
+            age: values.age,
+            industry: values.industry
         })
             .then(function (response) {
                 console.log(response);

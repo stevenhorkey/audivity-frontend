@@ -41,7 +41,9 @@ class Team extends Component {
                             <p className="team-p mb-5">We know that good things come to those who listen. Good stories and awesome content deserves voice.  We believe that you should have a choice whether to read or to listen to your favorite content.</p>
                         </header>
 
-                        {this.renderList()}
+                        {
+                            // this.renderList()
+                        }
 
                     </div>
                 </section>

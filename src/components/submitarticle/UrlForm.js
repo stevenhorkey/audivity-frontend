@@ -60,19 +60,19 @@ let UrlForm = (props) => {
       <div className="form-group mr-1 input-container url">
         <Field component={renderSelect} name="age" label="Select your targeted age">
           <option value="18_and_60" selected>Not relevant</option>
-          <option name="18_and_25">Between 18 and 25</option>
-          <option name="26_and_35">Between 26 and 35</option>
-          <option name="36_and_45">Between 36 and 45</option>
-          <option name="46_and_60">Between 46 and 60</option>
+          <option value="18_and_25">Between 18 and 25</option>
+          <option value="26_and_35">Between 26 and 35</option>
+          <option value="36_and_45">Between 36 and 45</option>
+          <option value="46_and_60">Between 46 and 60</option>
         </Field>
       </div>
 
       {/* gender */}
       <div className="form-group mr-1 input-container url">
-        <Field component={renderSelect} name="age" label="Select your targeted gender">
+        <Field component={renderSelect} name="gender" label="Select your targeted gender">
           <option value="" selected>Not relevant</option>
-          <option name="male">Male</option>
-          <option name="female">Female</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
         </Field>
       </div>
 
