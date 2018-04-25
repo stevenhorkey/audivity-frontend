@@ -45,7 +45,7 @@ ReactDOM.render(
                     <Route path="/submitEmail/:ReqID" component={SubmitEmail}/>
                     <Route path="/uploadAudio/:ReqID" component={UploadAudio}/>
                     <Route path="/audioSamples/:usrID" component={AudioSamples}/>
-                    <Route path="/" component={Homepage}/>
+                    <Route path="/" component={SubmitArticle}/>
                 </Switch>
             </div>
         </BrowserRouter>

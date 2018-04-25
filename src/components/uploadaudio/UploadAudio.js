@@ -111,7 +111,7 @@ class UploadAudio extends Component {
                                 </div>
 
                                 <input id="audio-uploader" type="file" name="file" />
-                                <div class="info">Choose file (mp3 only) </div>
+                                <div className="info">Choose file (mp3 only) </div>
 
                                 <button type="submit" className="btn btn-primary text-uppercase px-3 pt-2" onClick={this.upload}>Send &nbsp;<i className="ion-android-arrow-forward"> </i></button>
 

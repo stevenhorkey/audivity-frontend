@@ -58,7 +58,7 @@ let UrlForm = (props) => {
 
       {/* age */}
       <div className="form-group mr-1 input-container url">
-        <Field component={renderSelect} name="age" label="Select your targeted age">
+        <Field component={renderSelect} name="age" label="Select voice-over age">
           <option value="18_and_60" selected>Not relevant</option>
           <option value="18_and_25">Between 18 and 25</option>
           <option value="26_and_35">Between 26 and 35</option>
@@ -69,7 +69,7 @@ let UrlForm = (props) => {
 
       {/* gender */}
       <div className="form-group mr-1 input-container url">
-        <Field component={renderSelect} name="gender" label="Select your targeted gender">
+        <Field component={renderSelect} name="gender" label="Select voice-over gender">
           <option value="" selected>Not relevant</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
@@ -77,7 +77,7 @@ let UrlForm = (props) => {
       </div>
 
       {/* industry */}
-      <label>Entre your targeted industry</label>
+      <label>What industry are you in ?</label>
       <div className="form-group mr-1 input-container url">
         <Field component={renderField} type="text" label="(e.g., Computer science, Music,...)" name="industry" />
       </div>
