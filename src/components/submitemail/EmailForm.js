@@ -41,8 +41,12 @@ let EmailForm = (props) => {
 
       <div className="form-group mb-5">
         <label htmlFor="emailInput">Your <strong>email address</strong>.</label>
-        {/* <input type="email" className="form-control border-top-0 border-left-0 border-right-0" id="emailInput" aria-describedby="emailHelp" placeholder="jon@dough.com" /> */}
         <Field component={renderField} type="email" label="jon@dough.com" name="email" aria-describedby="emailHelp" />
+      </div>
+
+      <div className="form-group mb-5">
+        <label htmlFor="emailInput">Your <strong>Company</strong>.</label>
+        <Field component={renderField} type="text" label="TheGuardian" name="company" />
       </div>
 
       <button type="submit" className="btn btn-primary text-uppercase px-3 pt-2">Send &nbsp;<i className="ion-android-arrow-forward"> </i></button>

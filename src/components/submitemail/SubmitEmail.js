@@ -19,7 +19,8 @@ class SubmitEmail extends Component {
         axios.post('https://api.audivity.com/user/register_profile', {
             key: this.props.match.params.ReqID,
             email: values.email,
-            name: values.name
+            name: values.name,
+            company: values.company
         })
             .then(function (response) {
                 console.log(response);

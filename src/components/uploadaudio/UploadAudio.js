@@ -87,7 +87,7 @@ class UploadAudio extends Component {
                                 {uploaded ? <h1><i className="ion-checkmark-circled"> </i> &nbsp; Upload success! </h1> : <h1><i className="ion-upload"> </i> &nbsp;Upload your Audition</h1>}
 
                                 {uploaded ? <p> You voice over sample is on its way, you’ll receive an email as soon as  <b>{this.ReqUrl.company_name}</b> reviews it! </p> : null}
-                                {this.ReqUrl && !uploaded ? <p>Your goal is to convey this <a href={this.ReqUrl.url}>specific article</a> in an engaging and informative way. Podcasting is an art so take it from here and feel free to find your own pace, tone. Do change article structure as you see fit so listeners digest the message and come back for more</p> : null}
+                                {this.ReqUrl && !uploaded ? <p>Your goal is to convey this <a href={this.ReqUrl.url}target="_blank">specific article</a> in an engaging and informative way. Podcasting is an art so take it from here and feel free to find your own pace, tone. Do change article structure as you see fit so listeners digest the message and come back for more</p> : null}
 
                             </header>
                             {this.ReqUrl && !uploaded ? <section>
