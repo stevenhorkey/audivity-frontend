@@ -1,40 +1,59 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import ContactForm from './ContactForm'
+
 import "./Contact.css";
 
 class Contact extends Component {
+
+    state = {
+        success: false
+    }
+
+    submit = values => {
+        // print the form values to the console
+        console.log(values);
+        var that = this;
+
+        //Send registre rest request	
+        axios.post('https://api.audivity.com/user/contact_us', {
+            email: values.email,
+            name: values.name,
+            message: values.message
+        })
+            .then(function (response) {
+                console.log(response);
+                //Request success
+                that.setState({ success: true })
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }
+
     render() {
+
+        const { success } = this.state;
+
         return (
             <main className="contact">
                 <div className="bg pb-5 pt-5">
                     <div className="container">
-                    <div className="mt-5 card w-580 mx-auto p-5">
-                        <header className="text-center">
-                            <h1>Get Connected</h1>
-                            <p>Let us know what you're thinking. Feel free to reach out.</p>
-                        </header>
-                        <section>
-                            <form>
+                        <div className="mt-5 card w-580 mx-auto p-5">
+                            <header className="text-center">
 
-                                <div className="form-group mb-5 mt-4">
-                                    <label htmlFor="nameInput">Your <strong>name.</strong></label>
-                                    <input type="text" className="form-control border-top-0 border-left-0 border-right-0" id="nameInput" placeholder="Jon Dough" />
-                                </div>
+                                {success ? <h1><i className="ion-checkmark-circled"> </i> &nbsp; Operation success! </h1> : <div><h1>Get Connected</h1> <p>Let us know what you're thinking. Feel free to reach out.</p></div>
+                            }
 
-                                <div className="form-group mb-5">
-                                    <label htmlFor="emailInput">Your <strong>email address</strong>.</label>
-                                    <input type="email" className="form-control border-top-0 border-left-0 border-right-0" id="emailInput" aria-describedby="emailHelp" placeholder="jon@dough.com" />
-                                </div>
-
-                                <div className="form-group mb-5">
-                                    <label htmlFor="messageInput">Your <strong>message</strong>.</label>
-                                    <textarea className="form-control border-top-0 border-left-0 border-right-0" id="messageInput" rows="3" placeholder="Hello, Audivity!"></textarea>
-                                </div>
-                                <button type="submit" className="btn btn-primary text-uppercase px-3 pt-2">Send &nbsp;<i className="ion-android-arrow-forward"> </i></button>
-                            </form>
-                        </section>
+                            </header>
+                            <section>
+                                    {!success ? <ContactForm onSubmit={this.submit} /> : null}
+                            </section>
 
 
-                    </div>
+                        </div>
                     </div>
                 </div>
             </main>

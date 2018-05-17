@@ -30,6 +30,10 @@
     font-weight: 400;
 }
 
+.contact .error{
+    color: red;
+}
+
 .contact strong {
     font-weight: 500;
 }
