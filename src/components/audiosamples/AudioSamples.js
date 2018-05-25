@@ -153,7 +153,7 @@ class AudioSamples extends Component {
 
 
                                 {player_loaded && !loaded ? <p>Please preview all the samples and tell us which ones you like.</p> : null}
-                                {loaded && !not_interested && !feedback_submited? <p><b>Sign Up</b> to join our exclusive partner program and learn how we can convert your blogs into polished and published digital audio to you more traffic, revenue, and loyal listeners. No contracts, No hidden costs. No need for audio recording, editing or publishing just sit back and enjoy. </p> : null}
+                                {loaded && !not_interested && !feedback_submited? <p><b>Sign Up</b> to join our exclusive partner program and learn how we can convert your blogs into polished digital audio to get you more traffic, revenue, and loyal listeners. No contracts. No hidden costs. No need for audio recording, editing or publishing. Just sit back and enjoy. </p> : null}
                                 {not_interested && !feedback_submited? <p>What would you want instead?</p> : null}
                                 {feedback_submited? <p>Audivity team will contact you very soon. </p> : null}
 

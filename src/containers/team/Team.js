@@ -53,7 +53,7 @@ class Team extends Component {
                         <div className="w-720 mx-auto py-5">
                             <h1 className="text-primary future-h1">The future starts today.</h1>
                             <p className="mt-4 future-p mb-0">
-                                Today we automate conversion of written content into digital audio. Tomorrow we are leveraging AI voice reconstruction to make things simpler. The day after we automate video production.
+                                Today we automate conversion of written content into digital audio. Tomorrow we leverage AI voice reconstruction to make things simpler. The day after we automate video production.
                             </p>
                         </div>
                     </div>
