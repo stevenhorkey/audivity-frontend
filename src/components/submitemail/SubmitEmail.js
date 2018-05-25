@@ -47,7 +47,7 @@ class SubmitEmail extends Component {
                             
                             {success ? <h1><i className="ion-checkmark-circled"> </i> &nbsp; Operation success! </h1>:<h1><i className="ion-clock"> </i> &nbsp;We are working on creating fresh samples for you!</h1>}
 
-                            {success ? <p> You free voice over sample are on its way, you’ll receive an email as soon as they are ready! </p>:<p>Submit your email address and name to receive your free samples</p>}
+                            {success ? <p> You free voice over sample are on its way, you’ll receive an email as soon as they are ready! </p>:<p>Submit your name, email address, and company name to receive your free samples</p>}
                             
                         </header>
                         <section>

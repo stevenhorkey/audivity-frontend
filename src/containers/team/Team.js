@@ -28,7 +28,7 @@ class Team extends Component {
             <main className="team">
                 <header className="jumbotron text-center mb-0">
                     <h1 className="display-4 text-white text-shadow mb-4">From Creators to Creators</h1>
-                    <p className="lead text-white text-shadow w-720 mx-auto">Our team is set out to build new tools to give human voice to written content. We take care of the hard stuff and let the creatives focus on content. We voice your stories and bring new ears.</p>
+                    <p className="lead text-white text-shadow w-720 mx-auto">Our team has set out to build new tools to give human voice to written content. We take care of the hard stuff and let the creatives focus on content. We voice your stories and bring new ears.</p>
                 </header>
 
 

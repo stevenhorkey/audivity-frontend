@@ -45,7 +45,7 @@ let EmailForm = (props) => {
       </div>
 
       <div className="form-group mb-5">
-        <label htmlFor="emailInput">Your <strong>Company</strong>.</label>
+        <label htmlFor="emailInput">Your <strong>company</strong>.</label>
         <Field component={renderField} type="text" label="TheGuardian" name="company" />
       </div>
 
