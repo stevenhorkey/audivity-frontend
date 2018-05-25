@@ -41,11 +41,11 @@ class Navbar extends Component {
                             <li className="nav-item mx-0">
                                 <a className="nav-link text-shadow text-white" href="https://angel.co/audivity/jobs" target="_blank">Jobs</a>
                             </li>
-                            <li className="nav-item mx-3">
+                            <li className="nav-item mx-0">
                                 <Link className="nav-link text-shadow text-white" to="/contact">Contact</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link btn btn-secondary px-3 text-white" to="/login">Log In</Link>
+                            <li className="nav-item mx-3">
+                                <Link className="nav-link btn btn-secondary px-3 text-white login-btn" to="/login">Log In</Link>
                             </li>
                             {/* <li className="nav-item">
                                     <Link className="nav-link btn btn-primary px-3 text-white" to="/signup">Sign Up</Link>
