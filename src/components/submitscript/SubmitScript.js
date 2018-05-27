@@ -20,9 +20,9 @@ class SubmitScript extends Component {
             key: this.props.match.params.ReqID,
             url: values.url,
             title: values.title,
-            introScript: values.intro,
-            mainScript: values.name,
-            outroScript: values.company,
+            introScript: values.introScript,
+            mainScript: values.mainScript,
+            outroScript: values.outroScript,
             scriptNotes: values.scriptNotes
         })
             .then(function (response) {

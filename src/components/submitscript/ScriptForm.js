@@ -6,18 +6,20 @@ const validate = values => {
   const errors = {}
   if (!values.url) {
     errors.url = 'URL Required'
-  }
-  // if (!values.introScript) {
-  //   errors.introScript = 'Welcome your listeners! Script Required.'
-  // }
-  // if (!values.mainScript) {
-  //   errors.mainScript = 'Don\'t forget your content! Script Required.'
-  // }
-  // if (!values.outroScript) {
-  //   errors.outroScript = 'Wrap up your podcast! Script Required.'
-  // }
-  //  else if (!/(\d{4})([\/-])(\d{1,2})\2(\d{1,2})/.test(values.url)) {
+  } 
+  // else if (!/(\d{4})([\/-])(\d{1,2})\2(\d{1,2})/.test(values.url)) {
   //   errors.url = 'Hmm, doesn’t look like you’ve submitted a link to a specific blog posts. Try again.'
+  // }
+  if (!values.introScript) {
+    errors.introScript = 'Welcome your listeners - Script Required'
+  }
+  if (!values.mainScript) {
+    errors.mainScript = 'Don\'t forget your content - Script Required'
+  }
+  if (!values.outroScript) {
+    errors.outroScript = 'Wrap up your podcast - Script Required'
+  }
+  
   // }
 
   return errors
@@ -36,9 +38,9 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
 
 )
 
-const textareaField = ({ input, label, type, placeholder, meta: { touched, error, warning } }) => (
+const textareaField = ({ input, label, type, meta: { touched, error, warning } }) => (
   <div>
-    <textarea rows="5" placeholder={placeholder} className="form-control border-top-0 border-left-0 border-right-0" ></textarea>
+    <textarea {...input} rows="5" values="" placeholder={label} className="form-control border-top-0 border-left-0 border-right-0" ></textarea>
     <div className="error">{touched && ((error && <div className="label"><i className="ion-alert"> </i> &nbsp; {error}</div>) || (warning && <div>{warning}</div>))}
   </div></div>
 
@@ -65,19 +67,19 @@ let ScriptForm = (props) => {
       {/* intro script */}
       <div className="form-group mb-5">
         <label htmlFor="introScript">Intro <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1MgfK1wiFOtAqaEtlvPC4aC2uq1vGlSbswBpLmTxiXsE/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Need Help?</a></label>
-        <Field name="introScript" placeholder="The script for how you want your podcast to start. How do you want to make your first impression? What are you all about?" component={textareaField} />
+        <Field name="introScript" label="The script for how you want your podcast to start. How do you want to make your first impression? What are you all about?" component={textareaField} />
       </div>
 
       {/* main script */}
       <div className="form-group mb-5">
         <label htmlFor="mainScript">Main <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1ku2JtnXKmzJKdfK7CRUD4hQJXGeG8VOOD0j3vRUIdl4/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Need Help?</a></label>
-        <Field name="mainScript" placeholder="The heart of your message. This is where you expose your story to new ears." component={textareaField} />
+        <Field name="mainScript" label="The heart of your message. This is where you expose your story to new ears." component={textareaField} />
       </div>
 
       {/* end script */}
       <div className="form-group mb-5">
         <label htmlFor="outroScript">Outro <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1MgfK1wiFOtAqaEtlvPC4aC2uq1vGlSbswBpLmTxiXsE/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Need Help?</a></label>
-        <Field name="outroScript" placeholder="The script for how you want your podcast to end. What final words do you want said? What is your call to action?" component={textareaField} />
+        <Field name="outroScript" label="The script for how you want your podcast to end. What final words do you want said? What is your call to action?" component={textareaField} />
       </div>
 
       {/* style and feedback */}
