@@ -66,7 +66,7 @@ class Homepage extends Component {
                         <form className="mx-auto w-440">
 
                             <div className="form-group mb-5 mt-4">
-                                <label htmlFor="nameInput">Your <strong>name.</strong></label>
+                                <label htmlFor="nameInput">Your <strong>name</strong>.</label>
                                 <input type="text" className="bg-light form-control border-top-0 border-left-0 border-right-0" id="nameInput" placeholder="Jon Dough" />
                             </div>
 

@@ -13,6 +13,7 @@ import Contact from './components/contact/Contact';
 import Homepage from './components/homepage/Homepage';
 import SubmitArticle from './components/submitarticle/SubmitArticle';
 import SubmitEmail from './components/submitemail/SubmitEmail';
+import SubmitScript from './components/submitscript/SubmitScript';
 import UploadAudio from './components/uploadaudio/UploadAudio';
 import AudioSamples from './components/audiosamples/AudioSamples';
 import Login from './components/login/Login';
@@ -38,6 +39,7 @@ ReactDOM.render(
                 <Navbar />
                 <Switch>
                     <Route path="/contact" component={Contact}/>
+                    <Route path="/submitScript" component={SubmitScript}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/signup" component={Signup}/>
                     <Route path="/team" component={Team}/>

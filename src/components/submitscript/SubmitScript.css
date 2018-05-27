@@ -1,5 +1,5 @@
-.SubmitEmail .bg {
-    height: 100vh;
+.SubmitScript .bg {
+    min-height: 100vh;
     background: url("../../assets/contact-bg.svg") center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -7,42 +7,56 @@
     background-size: cover; 
 }
 
-.SubmitEmail .w-580 {
+.SubmitScript .w-700 {
     max-width: 700px;
 }
-.SubmitEmail .error {
+.SubmitScript .error {
     margin-top: 9px;
 }
-.SubmitEmail .error .label{
+.SubmitScript .error .label{
     color: red;
 }
 
-.SubmitEmail .card {
+.SubmitScript .card {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.SubmitEmail h1 {
+.SubmitScript h1 {
     font-weight: 300;
     font-size: 28px;
 }
 
-.SubmitEmail p {
+.SubmitScript p {
     font-weight: 300;
     font-size: 15px;
     line-height: 28px;
 }
-.SubmitEmail label {
+.SubmitScript label {
     font-size: 14px;
     font-weight: 400;
+    width: 100%;
 }
 
-.SubmitEmail strong {
+.SubmitScript strong {
     font-weight: 500;
 }
 
+.SubmitScript textarea {
+    border: 1px solid #868D93 !important;
+}
 
 .team .team-p {
     font-weight: 300;
     font-size: 15px;
     line-height: 28px;
+}
+
+.script-help {
+    float: right;
+    color: black;
+}
+.script-help:hover {
+    color: #1EB8B1;
+    cursor: pointer;
+    text-decoration: none;
 }

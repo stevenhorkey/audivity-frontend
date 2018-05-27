@@ -34,7 +34,7 @@ let EmailForm = (props) => {
 
     <form onSubmit={handleSubmit}>
 
-      <div className="form-group mb-5 mt-4">
+      <div className="form-group mb-5">
         <label htmlFor="nameInput">Your <strong>name.</strong></label>
         <Field component={renderField} type="text" label="Jon Dough" name="name" />
       </div>
