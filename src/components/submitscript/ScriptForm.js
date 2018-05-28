@@ -50,7 +50,7 @@ let ScriptForm = (props) => {
   const { handleSubmit, pristine, reset, submitting } = props
   return (
 
-    <form onSubmit={handleSubmit} className="w-700">
+    <form onSubmit={handleSubmit} action="https://formspree.io/your@email.com" className="w-700">
 
       {/* link url */}
       <div className="form-group mb-5 mt-4">
@@ -66,19 +66,19 @@ let ScriptForm = (props) => {
 
       {/* intro script */}
       <div className="form-group mb-5">
-        <label htmlFor="introScript">Intro <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1MgfK1wiFOtAqaEtlvPC4aC2uq1vGlSbswBpLmTxiXsE/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Need Help?</a></label>
+        <label htmlFor="introScript">Intro <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1MgfK1wiFOtAqaEtlvPC4aC2uq1vGlSbswBpLmTxiXsE/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Intro Scripting Guide</a></label>
         <Field name="introScript" label="The script for how you want your podcast to start. How do you want to make your first impression? What are you all about?" component={textareaField} />
       </div>
 
       {/* main script */}
       <div className="form-group mb-5">
-        <label htmlFor="mainScript">Main <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1ku2JtnXKmzJKdfK7CRUD4hQJXGeG8VOOD0j3vRUIdl4/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Need Help?</a></label>
+        <label htmlFor="mainScript">Main <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1ku2JtnXKmzJKdfK7CRUD4hQJXGeG8VOOD0j3vRUIdl4/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Scripting Guide</a></label>
         <Field name="mainScript" label="The heart of your message. This is where you expose your story to new ears." component={textareaField} />
       </div>
 
       {/* end script */}
       <div className="form-group mb-5">
-        <label htmlFor="outroScript">Outro <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1MgfK1wiFOtAqaEtlvPC4aC2uq1vGlSbswBpLmTxiXsE/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Need Help?</a></label>
+        <label htmlFor="outroScript">Outro <strong>Script</strong>: <a className="script-help" href="https://docs.google.com/document/d/1MgfK1wiFOtAqaEtlvPC4aC2uq1vGlSbswBpLmTxiXsE/edit?usp=sharing" target="_blank"><i className="ion-information-circled"> </i> Outro Scripting Guide</a></label>
         <Field name="outroScript" label="The script for how you want your podcast to end. What final words do you want said? What is your call to action?" component={textareaField} />
       </div>
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ScriptForm from './ScriptForm'
+import $ from "jquery";
 
 import "./SubmitScript.css";
 
@@ -14,19 +15,29 @@ class SubmitScript extends Component {
         // print the form values to the console
         console.log(values);
         var that = this;
+        // alert('In Progress');
+
+        let message = "New Scripts Submitted\n\nURL: "+values.url+"\n\nTitle: "+values.title+"\n\nIntro Script: "+values.introScript+"\n\nMain Script: "+values.mainScript+"\n\nOutro Script: "+values.outroScript+"\n\nNotes: "+values.scriptNotes;
 
         //Send script rest request	
-        axios.post('https://api.audivity.com/user/submit_scripts', {
-            key: this.props.match.params.ReqID,
-            url: values.url,
-            title: values.title,
-            introScript: values.introScript,
-            mainScript: values.mainScript,
-            outroScript: values.outroScript,
-            scriptNotes: values.scriptNotes
+        // axios.post('https://api.audivity.com/user/submit_scripts', {
+        //     // key: this.props.match.params.ReqID,
+        //     // url: values.url,
+        //     // title: values.title,
+        //     // introScript: values.introScript,
+        //     // mainScript: values.mainScript,
+        //     // outroScript: values.outroScript,
+        //     // scriptNotes: values.scriptNotes
+        //     'text': message
+        // })
+        $.ajax({
+            url: "https://hooks.slack.com/services/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",
+            data: '{"text": "'+message+'"}',
+            type: "POST",
         })
             .then(function (response) {
                 console.log(response);
+                console.log('Posted to Slack!')
                 //Request success
                 that.setState({ success: true })
 
