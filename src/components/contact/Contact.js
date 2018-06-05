@@ -48,6 +48,7 @@ class Contact extends Component {
                             }
 
                             </header>
+                        
                             <section>
                                     {!success ? <ContactForm onSubmit={this.submit} /> : null}
                             </section>

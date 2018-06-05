@@ -15,8 +15,9 @@ class SubmitEmail extends Component {
         console.log(values);
         var that = this;
 
-        //Send registre rest request	
-        axios.post('https://api.audivity.com/user/register_profile', {
+        //Send registre rest request
+        // Changed to http from https. Threw network error
+        axios.post('http://api.audivity.com/user/register_profile', {
             key: this.props.match.params.ReqID,
             email: values.email,
             name: values.name,

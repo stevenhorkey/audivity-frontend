@@ -31,7 +31,8 @@ class SubmitScript extends Component {
         //     'text': message
         // })
         $.ajax({
-            url: "https://hooks.slack.com/services/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",
+            // web hook to send to private slack channel 'script--submissions'
+            url: "https://hooks.slack.com/services/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",
             data: '{"text": "'+message+'"}',
             type: "POST",
         })

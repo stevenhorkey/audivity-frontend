@@ -23,8 +23,9 @@ class SubmitArticle extends Component {
         // print the form values to the console
         console.log(values);
         var that = this;
-        //Send rest request	
-        axios.post('https://api.audivity.com/user/url', {
+        // Send rest request	
+        // Changed https to http. Form was throwing network error
+        axios.post('http://api.audivity.com/user/url', {
             url: values.url,
             gender: values.gender,
             age: values.age,
