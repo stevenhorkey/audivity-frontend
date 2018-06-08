@@ -8,14 +8,14 @@ class SubmitEmail extends Component {
 
     state = {
         success: false
-      }
+    }
 
     submit = values => {
         // print the form values to the console
         console.log(values);
         var that = this;
 
-        //Send registre rest request
+        //Send register rest request
         // Changed to http from https. Threw network error
         axios.post('http://api.audivity.com/user/register_profile', {
             key: this.props.match.params.ReqID,
@@ -25,14 +25,12 @@ class SubmitEmail extends Component {
         })
             .then(function (response) {
                 console.log(response);
-                //Request success
+                //Request success                    
                 that.setState({ success: true })
-
             })
             .catch(function (error) {
                 console.log(error);
             });
-
     }
 
     render() {

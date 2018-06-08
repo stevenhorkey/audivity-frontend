@@ -16,7 +16,7 @@ class Contact extends Component {
         var that = this;
 
         //Send registre rest request	
-        axios.post('https://api.audivity.com/user/contact_us', {
+        axios.post('http://api.audivity.com/user/contact_us', {
             email: values.email,
             name: values.name,
             message: values.message
